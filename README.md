@@ -18,3 +18,9 @@
 - npm install --save cheerio request
 - using request and cheerio, fetch and update information directly from the federal interest website
 - implement GET API to fetch rates stored in the Postgres database
+
+
+# 4. ANGULAR FACTORIES
+- RateFactory: fech rates using $http
+- LoanFactory: calculate loan schedule and send back to controller
+
