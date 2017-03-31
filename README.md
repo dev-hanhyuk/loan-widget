@@ -14,6 +14,7 @@
 
 
 # 3. SERVER API AND DATABASE SETUP
-- setup Postgres database
-- using cheerio, fetch and update information directly from the federal interest website
+- setup Postgres database: npm install --save debug chalk sequelize pg pg-native
+- npm install --save cheerio request
+- using request and cheerio, fetch and update information directly from the federal interest website
 - implement GET API to fetch rates stored in the Postgres database
