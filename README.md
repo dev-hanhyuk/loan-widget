@@ -24,3 +24,10 @@
 - RateFactory: fech rates using $http
 - LoanFactory: calculate loan schedule and send back to controller
 
+
+# 5. CREATE LOAN INPUT AND RESULT FORM
+- using ui-view, create component form view inside the main view template
+- create form.template.html and update <ui-view> inside main.template.html
+- connect the form with MainCtrl
+- styling form(browser/scss/form.scss)
+

@@ -1,0 +1,159 @@
+
+@import "colors.scss";
+
+.form-container {
+  background: #f9f9f9;
+  display: flex;
+  margin-top: 10vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  flex: 1 0 40%;
+  padding: 5vh 3vh;
+  width: 50%;
+  border: 1px solid #eee;
+  line-height: 2rem;
+}
+
+.result-container {
+  flex: 1 0 40%;
+  padding: 3vh;
+  width: 50%;
+  background: #fff;
+  border: 1px solid #eee;
+  text-align: center;
+  .dollar-sign {
+    font-size: 1rem;
+    vertical-align: top;
+  }
+}
+
+.input-form {
+  margin-top: 1vh;
+  padding-left: 3%;
+  width: 97%;
+  height: 2rem;
+  outline: none;
+  border: 2px solid #eee;
+  font-size: 15px;
+}
+
+.input-form:focus {
+  border-bottom: 3px solid $primary;
+}
+
+.form-group {
+  margin-bottom: 2vh;
+}
+
+.multiple-forms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#input-rate {
+  display: flex;
+  width: 20%;
+  margin-right: 2vh;
+}
+
+.select-form {
+  margin-top: 1vh;
+  margin-left: 2vh;
+  width: 60%;
+  height: 2rem;
+  background: #fff;
+  outline: none;
+  border: 1px solid #eee;
+}
+
+.select-option {
+  font-size: 15px;
+}
+
+.result-table {
+  margin-top: 2vh;
+  width: 100%;
+  tr {
+    height: 2rem;
+  }
+}
+
+.result-separate-line {
+  border: 1px solid $primary;
+}
+
+.result-title {
+  text-align: left;
+}
+.result-amount {
+  text-align: right;
+}
+
+.reset-button {
+  margin-top: 1vh;
+  background: transparent;
+  color: #607D8B;
+  border: 2px solid #607D8B;
+  width: 100%;
+  height: 3rem;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  outline: none;
+}
+
+.reset-button:hover {
+  background: #607D8B;
+  color: #fff;
+}
+
+.open-schedule-button {
+  margin-top: 5vh;
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  border-radius: 2rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  outline: none;
+}
+
+.open-schedule-button:hover {
+  background: $primary;
+  color: #fff;
+}
+
+
+#month {
+  display: flex;
+  width: 60%;
+  margin-right: 2vh;
+  padding-right: 0;
+}
+
+#term {
+  display: flex;
+  width: 40%;
+}
+
+.form-error {
+  color: $error;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 0.8rem;
+}
+
+.form-warning {
+  color: $warning;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 0.8rem;
+}

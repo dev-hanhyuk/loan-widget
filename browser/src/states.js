@@ -3,7 +3,9 @@
 app.config(($stateProvider) =>
   $stateProvider.state('main', {
     url: '/main',
-    templateUrl: 'src/templates/main.template.html',
-    conroller: 'MainCtrl'
+    views: {
+      '': { templateUrl: 'src/templates/main.template.html', conroller: 'MainCtrl'},
+      'form@main': {templateUrl: 'src/templates/form.template.html', controller: 'MainCtrl'}
+    }
   })
 )

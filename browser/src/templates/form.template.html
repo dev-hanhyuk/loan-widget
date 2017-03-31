@@ -1,0 +1,51 @@
+<div class="form-container box-shadow">
+
+  <form novalidate class="input-container" name="form">
+    <div class="form-group">
+      <label>How much are you looking to borrow?</labe>
+      <p class="form-error" ng-show="form.loan_amount.$touched && form.loan_amount.$error.required">Please fill out the amount of loan</p>
+      <input class="input-form" type="text" placeholder="5000" ng-model="loan.amount" name="loan_amount" ng-change="update()" required/>
+    </div>
+
+    <div class="form-group">
+      <label>When? For how long (in months)?</labe>
+      <p class="form-warning" ng-show="loan_start_month_warning != ''">{{loan_start_month_warning}}</p>
+      <p class="form-error" ng-show="form.loan_months.$touched && form.loan_months.$error.required">Please fill out the number of months to payback</p>
+      <div class="multiple-forms">
+        <input class="input-form" id="month" type="month" name="start" ng-model="loan.start_month" ng-change="update()" />
+        <input class="input-form" id="term" type="text" placeholder="48" name="loan_months" ng-model="loan.number_of_months" ng-change="update()" required/>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label>Interest rate</labe>
+      <p class="form-error" ng-show="loan_rate_error != ''">{{loan_rate_error}}</p>
+      <p class="form-warning" ng-show="loan_rate_warning != ''">{{loan_rate_warning}}</p>
+      <div class="multiple-forms">
+        <input class="input-form" id="input-rate" type="text" placeholder="4.50" name="custom" ng-model="loan.custom_rate" ng-change="update()" />
+        <span>or</span>
+        <select class="select-form select-option" name="federal" ng-model="loan.federal_rate" ng-change="update()" >
+          <option value="" selected>Find a rate</option>
+          <option ng-repeat="rate in rates" value={{rate.interest_rate}}>{{(rate.interest_rate * 100).toFixed(2)}}% - {{rate.loan}}</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="reset-button" ng-click="reset()">Reset Calculation</button>
+  </form>
+
+  <div class="result-container">
+    <p>Your estimated monthly payment</p>
+    <h1><span class="dollar-sign">$</span>{{result.est_payment}}</h1>
+    <hr class="result-separate-line">
+    <table class="result-table">
+      <tr><td class="result-title">Total Principal</td><td class="result-amount">${{result.subtotal_principal.toFixed(2)}}</td></tr>
+      <tr><td class="result-title">Total Interest</td><td class="result-amount">${{result.subtotal_interest.toFixed(2)}}</td></tr>
+    </table>
+
+    <button class="open-schedule-button" ng-click="toggle_show_loan_schedule()" ng-show="show_loan_schedule == false">See amortization schedule</button>
+    <button class="open-schedule-button" ng-click="toggle_show_loan_schedule()" ng-show="show_loan_schedule == true">Close schedule</button>
+  </div>
+
+</div>
