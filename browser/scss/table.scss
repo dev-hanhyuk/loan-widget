@@ -1,0 +1,37 @@
+@import "colors.scss";
+
+.loan-schedule-table {
+  margin-top: 10vh;
+  width: 100%;
+
+  thead td {
+    border-bottom: 1px solid $primary;
+    background-color: $primary;
+    color: #fff;
+    text-align: center;
+  }
+
+  td {
+    background: #fff;
+    height: 2rem;
+    text-align: right;
+    padding-right: 2vh;
+    border: 1px solid #eee;
+    color: #8d8d8d;
+    font-size: 0.8rem;
+  }
+
+  tr td:first-child {
+    text-align: center;
+  }
+
+}
+
+table {
+  border-spacing: 0;
+}
+
+
+.table-footer td {
+  border: 0;
+}

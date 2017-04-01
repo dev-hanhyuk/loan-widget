@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "form.scss";
 @import "footer.scss";
+@import "table.scss";
 
 body {
   margin: 0;
@@ -24,3 +25,6 @@ p {
   padding: 10vh 25vw;
 }
 
+.loan-schedule {
+  margin-top: 15vh;
+}

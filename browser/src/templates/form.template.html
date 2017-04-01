@@ -49,3 +49,39 @@
   </div>
 
 </div>
+
+<div class="loan-schedule" ng-show="open_loan_schedule()">
+  <h2>LOAN AMORTIZATION SCHEDULE</h2>
+  <p>Backing buyer partnership graphical user interface creative niche market pivot channels entrepreneur mass market ramen
+    advisor facebook.</p>
+  <table class="loan-schedule-table box-shadow">
+    <thead>
+      <tr>
+        <td>Month</td>
+        <td>Payment</td>
+        <td>Principal</td>
+        <td>Interest</td>
+        <td>Balance</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="s in schedule">
+        <td>{{s.month}}</td>
+        <td>{{s.payment}}</td>
+        <td>{{s.principal}}</td>
+        <td>{{s.interest}}</td>
+        <td>{{s.balance}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Subtotal</td>
+        <td>{{subtotal_payment.toFixed(2)}}</td>
+        <td>{{subtotal_principal.toFixed(2)}}</td>
+        <td>{{subtotal_interest.toFixed(2)}}</td>
+        <td>-</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>
