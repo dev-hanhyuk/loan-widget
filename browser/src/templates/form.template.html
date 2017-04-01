@@ -1,5 +1,10 @@
-<div class="form-container box-shadow">
 
+<div class="description-container">
+  <h1>LOAN CALCULATOR</h1>
+  <p>This application calculates monthly loan payment and create a loan schedule table for you. The application requires the amount of loan, interest rate to apply and number of periods to payoff.</p>
+</div>
+
+<div class="form-container box-shadow">
   <form novalidate class="input-container" name="form">
     <div class="form-group">
       <label>How much are you looking to borrow?</labe>
@@ -50,10 +55,14 @@
 
 </div>
 
+
 <div class="loan-schedule" ng-show="open_loan_schedule()">
-  <h2>LOAN AMORTIZATION SCHEDULE</h2>
-  <p>Backing buyer partnership graphical user interface creative niche market pivot channels entrepreneur mass market ramen
-    advisor facebook.</p>
+
+  <div class="description-container">
+    <h1>LOAN AMORTIZATION SCHEDULE</h1>
+    <p>This loan amortization schedule shows how much you should pay for each month over the course of loan contract.</p>
+  </div>
+
   <table class="loan-schedule-table box-shadow">
     <thead>
       <tr>

@@ -1,6 +1,15 @@
 
 @import "colors.scss";
 
+.description-container {
+  background: #fff;
+  display: flex;
+  margin-top: 10vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
 .form-container {
   background: #f9f9f9;
   display: flex;

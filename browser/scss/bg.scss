@@ -2,7 +2,6 @@
   background-image: url("nyskyline.png");
   filter: grayscale(100%);
   background-size: cover;
-  perspective: 300px;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
@@ -16,15 +15,15 @@
   filter: grayscale(0%)
 }
 
-
 .parallax-container {
-  background: #ccc;
-  height: 100vh;
+  background: #eee;
+  padding-bottom: 20vh;
+  width: 100%;
   .welcome {
     text-align: left;
-    margin-top: 15vh;
-    margin-left: 30%;
-    width: 40%;
+    margin-top: 20%;
+    margin-left: 25%;
+    width: 50%;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -32,10 +31,12 @@
   }
 
   .parallax-slide-up {
-    width: 100vw;
+    width: 100%;
     margin-top: 70vh;
     text-align: center;
-    transform: translateZ(80px) scale(1.2);
+    img {
+      transform: scale(1.5) perspective(200px) translateZ(20px);
+    }
   }
 }
 
