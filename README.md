@@ -31,3 +31,6 @@
 - connect the form with MainCtrl
 - styling form(browser/scss/form.scss)
 
+
+# 6. OTHER TEMPLATES
+- footer
