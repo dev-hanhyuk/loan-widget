@@ -1,4 +1,6 @@
-# BUILD AND RUN
+# HOW TO BUILD AND RUN
+clone and checkout the master branch of github repository
+
 ```
 npm install
 gulp
