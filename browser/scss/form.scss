@@ -19,7 +19,7 @@
 }
 
 .input-container {
-  flex: 1 0 40%;
+  flex: 1 0 45%;
   padding: 5vh 3vh;
   width: 50%;
   border: 1px solid #eee;
@@ -34,9 +34,13 @@
   border: 1px solid #eee;
   text-align: center;
   .dollar-sign {
-    font-size: 1rem;
+    font-size: 1.4rem;
     vertical-align: top;
   }
+}
+
+#est-payment {
+  font-size: 3rem;
 }
 
 .input-form {
@@ -62,13 +66,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-between;
 }
 
-#input-rate {
-  display: flex;
-  width: 20%;
-  margin-right: 2vh;
-}
 
 .select-form {
   margin-top: 1vh;
@@ -94,6 +94,8 @@
 
 .result-separate-line {
   border: 1px solid $primary;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .result-title {
@@ -121,7 +123,7 @@
 }
 
 .open-schedule-button {
-  margin-top: 5vh;
+  margin-top: 10vh;
   background: transparent;
   color: $primary;
   border: 2px solid $primary;
@@ -141,21 +143,31 @@
 
 #month {
   display: flex;
-  width: 60%;
-  margin-right: 2vh;
+  width: 50%;
+  // margin-right: 2vh;
   padding-right: 0;
 }
 
 #term {
   display: flex;
-  width: 40%;
+  width: 20%;
+}
+
+#input-rate {
+  display: flex;
+  width: 20%;
+  // margin-right: 2vh;
+}
+
+#select-rate {
+  display: flex;
 }
 
 .form-error {
   color: $error;
   font-size: 0.7rem;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 0.3rem;
   line-height: 0.8rem;
 }
 
