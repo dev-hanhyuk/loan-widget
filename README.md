@@ -1,3 +1,10 @@
+# BUILD AND RUN
+```
+npm install
+gulp
+npm start
+```
+
 # 1. INITIAL SETUP
 - babel/eslint
 - gulp setup
