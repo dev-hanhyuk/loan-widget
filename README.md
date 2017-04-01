@@ -7,7 +7,7 @@ gulp
 npm start
 ```
 
-Click the link below to check out the live demo version
+Click the link to try the live demo version
 [LiveDemo](https://loan-calculation-widget.herokuapp.com)
 
 
