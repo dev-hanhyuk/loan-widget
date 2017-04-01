@@ -12,10 +12,11 @@ app.factory('LoanFactory', ($http, $log) => {
     let m = +loan.number_of_months;
     let amount = +loan.amount;
     let r = +loan.custom_rate > 0 ? +loan.custom_rate / 100 : +loan.federal_rate;
-    const annuity_factor = (1 - 1/ Math.pow(1 + r/m, m)) / (r/m);
-    const pmt = amount / annuity_factor;
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+    const annuity_factor = ( 1 - ( 1 / Math.pow(1 + r / 12, m) ) ) / (r / 12);
+    const pmt = amount / annuity_factor;
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     let balance = amount;
     let paid_principal = 0;
     let y = 0;
@@ -23,17 +24,17 @@ app.factory('LoanFactory', ($http, $log) => {
       if ( (loan.start_month.getMonth() + i) % 12 == 11 ) y +=1;
       let year = loan.start_month.getFullYear() + y ;
       let month = `${months[(loan.start_month.getMonth() + i+1) % 12 ]}-${year}`;
+
       if (i == m-1) {
-        let interest = (balance * (r/m)).toFixed(2);
+        let interest = (balance * (r / 12)).toFixed(2);
         let principal = (amount - paid_principal).toFixed(2);
         let payment = (Number(interest) + Number(principal)).toFixed(2);
         balance = 0;
         schedule.push({ month, payment, principal, interest, balance })
       } else {
-
         let payment = pmt.toFixed(2);
-        let interest = (balance * (r/m)).toFixed(2);
-        let principal = (payment - balance * (r/m)).toFixed(2);
+        let interest = (balance * (r / 12)).toFixed(2);
+        let principal = (payment - balance * (r / 12)).toFixed(2);
         paid_principal += Number(principal);
         balance = (balance - principal).toFixed(2);
         schedule.push({ month, payment, principal, interest, balance })
