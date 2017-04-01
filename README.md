@@ -7,6 +7,9 @@ gulp
 npm start
 ```
 
+[Demo](https://loan-calculation-widget.herokuapp.com)
+
+
 # 1. INITIAL SETUP
 - babel/eslint
 - gulp setup
