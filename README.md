@@ -34,3 +34,5 @@
 
 # 6. OTHER TEMPLATES
 - footer
+- table
+- background and parallax effect
