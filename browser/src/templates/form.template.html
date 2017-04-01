@@ -17,7 +17,6 @@
         <label>For how long? (months)</label>
         <input class="input-form" id="term" type="number" placeholder="48" name="loan_months" ng-model="loan.number_of_months" ng-change="update()" required/>
       </div>
-      <p class="form-warning" ng-show="loan_start_month_warning != ''">{{loan_start_month_warning}}</p>
       <p class="form-error" ng-show="form.loan_months.$touched && form.loan_months.$error.required">Please fill out the number of months to payback</p>
 
     </div>
