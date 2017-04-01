@@ -36,3 +36,14 @@
 - footer
 - table
 - background and parallax effect
+
+
+# 7. DEPLOY TO HEROKU
+- heroku login
+- heroku create (if you haven't initialized on the heroku website)
+- heroku config:set NODE_ENV=production
+- heroku config:set SESSION_SECRET=whateveryouwant
+- heroku addons:create heroku-postgresql:hobby-dev
+- git push heroku master
+- heroku open
+- heroku logs
