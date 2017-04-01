@@ -14,6 +14,7 @@ module.exports = app
   .use(express.static(resolve(__dirname, '..', 'public')))
   .use(express.static(resolve(__dirname, '..', 'browser')))
   .use(express.static(resolve(__dirname, '..', 'node_modules')))
+  .use('/api', require('./api'))
   .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')))
 
 if (module === require.main) {

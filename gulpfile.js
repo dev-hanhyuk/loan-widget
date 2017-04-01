@@ -37,11 +37,10 @@ gulp.task('lintJS', function () {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failOnError());
-
 });
 
 gulp.task('buildJS', ['lintJS'], function () {
-    return gulp.src(['./browser/src/app.js', './browser/src/**/*.js'])
+    return gulp.src(['./browser/src/app.js', './browser/src/states.js', './browser/src/**/*.js'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
@@ -97,7 +96,7 @@ gulp.task('buildCSSProduction', function () {
 });
 
 gulp.task('buildJSProduction', function () {
-    return gulp.src(['./browser/src/app.js', './browser/src/**/*.js'])
+    return gulp.src(['./browser/src/app.js', './browser/src/states.js', './browser/src/**/*.js'])
         .pipe(concat('main.js'))
         .pipe(babel({
             presets: ['es2015']
